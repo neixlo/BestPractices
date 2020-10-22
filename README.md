@@ -19,3 +19,9 @@ dir_name/
         ├── sample_file#2.txt
         └── sample_file#3.txt
 ```
+
+
+## freeze pip packages into requirements.txt
+```
+pip freeze > requirements.txt
+```
