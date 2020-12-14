@@ -25,3 +25,11 @@ dir_name/
 ```
 pip freeze > requirements.txt
 ```
+
+## erase disk completely and overwrite
+```
+sudo shred -n 6 -vz /dev/sda1
+```
+```-n``` 6: Overwrite 6 times instead of the default (25 times). \
+```-v``` : Show progress. \
+```-z``` : Add a final overwrite with zeros to hide shredding. \
