@@ -33,3 +33,12 @@ sudo shred -n 6 -vz /dev/sda1
 ```-n``` 6: Overwrite 6 times instead of the default (25 times). \
 ```-v``` : Show progress. \
 ```-z``` : Add a final overwrite with zeros to hide shredding. \
+
+## if you're unable to access the shared folder in VBox
+see: https://unix.stackexchange.com/questions/52667/file-permission-issues-with-shared-folders-under-virtual-box-ubuntu-guest-wind
+
+add your user to vboxsf group then reboot
+```
+usermod -aG vboxsf <youruser>
+sudo reboot
+```
