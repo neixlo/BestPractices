@@ -42,3 +42,18 @@ add your user to vboxsf group then reboot
 usermod -aG vboxsf <youruser>
 sudo reboot
 ```
+
+## set github identity
+
+### set the identity only in this repository
+```
+git config user.email "you@example.com"
+git config user.name "Your Name"
+```
+
+### set the identity globaly
+```
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+```
+
