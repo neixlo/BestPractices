@@ -47,13 +47,28 @@ sudo reboot
 
 ### set the identity only in this repository
 ```
-git config user.email "you@example.com"
-git config user.name "Your Name"
+git config user.email <you@example.com>
+git config user.name <Your Name>
 ```
 
 ### set the identity globaly
 ```
-git config --global user.email "you@example.com"
-git config --global user.name "Your Name"
+git config --global user.email <you@example.com>
+git config --global user.name <Your Name>
 ```
+
+### python file header
+
+```
+#!/usr/bin/env python3
+#-*- coding: utf-8 -*-
+
+'''
+description of this script
+
+usage: how to use.. python3 main.py -arg1 <argument>
+'''
+
+```
+
 
