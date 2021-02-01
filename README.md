@@ -73,6 +73,6 @@ usage: how to use.. python3 main.py -arg1 <argument>
 
 ### if chrome remote desktop isn't working on Ubuntu
 
-<img src="./assets/chrome-remote-desktop-setup.png">
+<img src="./chrome-remote-desktop-setup.png">
 Simply create the config dir..
 `$ mkdir ~/.config/chrome-remote-desktop`
