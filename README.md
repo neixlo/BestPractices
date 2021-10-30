@@ -76,3 +76,15 @@ usage: how to use.. python3 main.py -arg1 <argument>
 <img src="./chrome-remote-desktop-setup.png">
 Simply create the config dir..
 `$ mkdir ~/.config/chrome-remote-desktop`
+
+
+### install ubuntu on external disk (with seperate bootloader)
+Based on [this](https://unix.stackexchange.com/questions/305345/where-is-grub-installed-and-do-i-need-a-new-one-for-a-separate-linux-installatio) post.
+**Do not reboot during this process**
+1. Boot Live Image (in test mode)
+2. Set Flags (on windows drive) according to this:![changed_flags_efi_part](https://user-images.githubusercontent.com/34251323/139534953-bd86aaca-421c-4804-aeb5-d1729fc73a8c.png)
+3. Install Ubuntu, use custom partition layout like this: ![new_partition_layout](https://user-images.githubusercontent.com/34251323/139534956-0062a5c6-2ddb-4c7d-89a7-9bd22392ac46.png)
+4. DO NOT REBOOT
+5. Set the flags back (on windows drive) ![org_flags_efi_part](https://user-images.githubusercontent.com/34251323/139534958-7da265c1-b782-4061-a3f8-bb27f915a12a.png)
+6. reboot
+
