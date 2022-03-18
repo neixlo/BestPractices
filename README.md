@@ -88,3 +88,13 @@ Based on [this](https://unix.stackexchange.com/questions/305345/where-is-grub-in
 5. Set the flags back (on windows drive) ![org_flags_efi_part](https://user-images.githubusercontent.com/34251323/139534958-7da265c1-b782-4061-a3f8-bb27f915a12a.png)
 6. reboot
 
+
+
+
+### if there is "no space left on device" while installing pip / pip-compile packages
+https://askubuntu.com/questions/1326304/cannot-install-pip-module-because-there-is-no-space-left-on-device
+
+- `/` is too small to store downloaded files
+- TMPDIR=/home/user/cachedir python3 -m piptools compile --verbose
+- TMPDIR=/home/user/cachedir python3 -m pip install -r requirements.txt
+ 
