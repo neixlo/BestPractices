@@ -97,4 +97,11 @@ https://askubuntu.com/questions/1326304/cannot-install-pip-module-because-there-
 - `/` is too small to store downloaded files
 - TMPDIR=/home/user/cachedir python3 -m piptools compile --verbose
 - TMPDIR=/home/user/cachedir python3 -m pip install -r requirements.txt
- 
+
+
+### mount harddrive in ubuntu cli
+1. `lsblk -f` -> get UUID of wanted harddrive
+2. `mkdir /media/MOUNT/PATH`
+3. `sudo mount --uuid YOUR-UUID /media/MOUNT/PATH`
+4. or `sudo mount -o umask=000,dmask=000 --uuid YOUR-UUID /media/MOUNT/PATH` if permission issue
+5. 
