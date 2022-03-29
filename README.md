@@ -98,6 +98,10 @@ https://askubuntu.com/questions/1326304/cannot-install-pip-module-because-there-
 - TMPDIR=/home/user/cachedir python3 -m piptools compile --verbose
 - TMPDIR=/home/user/cachedir python3 -m pip install -r requirements.txt
 
+### if there is "no space left on device" for tmp files
+check `sudo du -h --max-depth=1 /var/log/journal` and check how big it is, then follow:
+https://ubuntuhandbook.org/index.php/2020/12/clear-systemd-journal-logs-ubuntu/
+
 
 ### mount harddrive in ubuntu cli
 1. `lsblk -f` -> get UUID of wanted harddrive
