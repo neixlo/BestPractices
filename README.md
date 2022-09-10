@@ -109,3 +109,8 @@ https://ubuntuhandbook.org/index.php/2020/12/clear-systemd-journal-logs-ubuntu/
 3. `sudo mount --uuid YOUR-UUID /media/MOUNT/PATH`
 4. or `sudo mount -o umask=000,dmask=000 --uuid YOUR-UUID /media/MOUNT/PATH` if permission issue
 5. 
+
+
+### install docker on ubuntu 18.04
+https://computingforgeeks.com/install-docker-desktop-on-ubuntu/
+https://askubuntu.com/questions/1408367/installing-docker-getting-predepends-init-system-helpers-1-54-but-1-51
