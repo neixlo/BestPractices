@@ -111,6 +111,62 @@ https://ubuntuhandbook.org/index.php/2020/12/clear-systemd-journal-logs-ubuntu/
 5. 
 
 
-### install docker on ubuntu 18.04
-https://computingforgeeks.com/install-docker-desktop-on-ubuntu/
-https://askubuntu.com/questions/1408367/installing-docker-getting-predepends-init-system-helpers-1-54-but-1-51
+### install x11vnc
+`sudo apt-get update` \
+`sudo apt-get install x11vnc`
+
+### configure x11vnc:
+`sudo x11vnc -storepasswd /etc/x11vnc.pass` \
+`sudo chown USERNAME: /etc/x11vnc.pass`
+
+### change login screen to light dm
+See also [this post](https://c-nergy.be/blog/?p=11767) \
+`sudo apt-get -y install slick-greeter` \
+-> then choose lightdm
+
+### setup an x11vnc service
+See also [this post](https://askubuntu.com/questions/229989/how-to-setup-x11vnc-to-access-with-graphical-login-screen) \
+`sudo nano /etc/systemd/system/x11vnc.service` \
+-> paste and save the following snippet:
+```
+[Unit]
+Description="x11vnc"
+Requires=display-manager.service
+After=display-manager.service
+
+[Service]
+ExecStart=/usr/bin/x11vnc -xkb -noxrecord -noxfixes -noxdamage -display :0 -auth /var/run/lightdm/root/:0
+ExecStop=/usr/bin/killall x11vnc
+Restart=on-failure
+Restart-sec=2
+
+[Install]
+WantedBy=multi-user.target
+```
+-> then run:
+
+`sudo systemctl daemon-reload` \
+`sudo systemctl enable x11vnc` \
+`sudo systemctl start x11vnc` 
+
+And check the status with: \
+`sudo systemctl status x11vnc`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
