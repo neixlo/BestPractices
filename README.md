@@ -171,7 +171,8 @@ Install ubuntu as usual.
 After installation boot with nomodeset (see above) and set nomodeset by default. See: https://askubuntu.com/questions/38780/how-do-i-set-nomodeset-after-ive-already-installed-ubuntu
 
 
-
+### clone an entire harddrive
+`dd if=/dev/sda of=/dev/sdb bs=32M status=progress`
 
 
 
