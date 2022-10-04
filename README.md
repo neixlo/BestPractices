@@ -154,8 +154,21 @@ And check the status with: \
 
 
 
+### install ubuntu on machine with nvidia gpu
 
+At boot enter bios with `F2`, `DEL` or alike:
+- disable fastboot
+- disable secure boot
+- disable secure chip tpm
 
+At restart, boot from LiveUSB stick.
+- Hit `Shift`
+- Hit `e` on the selected Ubuntu line
+- append `quiet splash` to `quiet splash nomodeset`
+
+Install ubuntu as usual.
+
+After installation boot with nomodeset (see above) and set nomodeset by default. See: https://askubuntu.com/questions/38780/how-do-i-set-nomodeset-after-ive-already-installed-ubuntu
 
 
 
