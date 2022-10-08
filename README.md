@@ -178,10 +178,10 @@ After installation boot with nomodeset (see above) and set nomodeset by default.
 
 ## install nvidia driver for new ubunto installation (resolutuion will work again)
 
-′sudo apt purge nvidia*′
-′ubuntu-drivers devices′
-′ubuntu-drivers devices | grep recommended′
-′sudo apt install nvidia-driver-470′
+`sudo apt purge nvidia*` \
+`ubuntu-drivers devices` \
+`ubuntu-drivers devices | grep recommended` \
+`sudo apt install nvidia-driver-470`
 
 
 
