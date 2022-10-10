@@ -183,6 +183,28 @@ After installation boot with nomodeset (see above) and set nomodeset by default.
 `ubuntu-drivers devices | grep recommended` \
 `sudo apt install nvidia-driver-470`
 
+## groups ans rights
+
+list groups \
+`groups USERNAME`
+
+new group \
+`sudo addgroup GROUPNAME`
+
+add user to group \
+`sudo adduser USERNAME GROUPNAME`
+
+assign group to file \
+´chgrp GROUPNAME /path/to/file`
+
+assign permissions to file \
+`chmod g+rwx GROUPNAME /path/to/file`
+
+
+
+
+
+
 
 
 
