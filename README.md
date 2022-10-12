@@ -143,6 +143,24 @@ Restart-sec=2
 [Install]
 WantedBy=multi-user.target
 ```
+Or without lightdm
+```
+[Unit]
+Description="x11vnc"
+Requires=display-manager.service
+After=display-manager.service
+
+[Service]
+ExecStart=/usr/bin/x11vnc -xkb -noxrecord -noxfixes -noxdamage -display :0 -auth /run/user/1000/gdm/Xauthority -rfbauth /etc/x11vnc.pass -loop
+ExecStop=/usr/bin/killall x11vnc
+Restart=on-failure
+Restart-sec=2
+
+[Install]
+WantedBy=multi-user.target
+```
+
+
 -> then run:
 
 `sudo systemctl daemon-reload` \
