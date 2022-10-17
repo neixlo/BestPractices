@@ -135,7 +135,7 @@ Requires=display-manager.service
 After=display-manager.service
 
 [Service]
-ExecStart=/usr/bin/x11vnc -xkb -noxrecord -noxfixes -noxdamage -display :0 -auth /var/run/lightdm/root/:0
+ExecStart=/usr/bin/x11vnc -xkb -noxrecord -noxfixes -noxdamage -display :0 -auth /var/run/lightdm/root/:0 -loop
 ExecStop=/usr/bin/killall x11vnc
 Restart=on-failure
 Restart-sec=2
@@ -170,6 +170,8 @@ WantedBy=multi-user.target
 And check the status with: \
 `sudo systemctl status x11vnc`
 
+-> for multiuser usage make sure to add the permissions for each user:
+sudo chown USER: /home/USER/.Xauthority
 
 
 ### install ubuntu on machine with nvidia gpu
